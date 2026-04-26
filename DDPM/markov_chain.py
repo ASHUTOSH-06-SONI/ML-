@@ -7,7 +7,9 @@ So firstly, there are states, for each state, we create a NxN transition matrix
 the values that go inside the matrix are the probabilities of a state transition happening 
 """
 import numpy as np
-states = [0,1]
+
+#Discrete states markov chains 
+states = [0,1]   
 transition_matrix = np.array([[0.8,0.2],
                              [0.3,0.7]
                             ])
@@ -21,3 +23,14 @@ for _ in range(100):
     trajectory.append(state)
 
 print(np.mean(trajectory))
+
+"""
+Continous States, this one fits into diffusion models
+x(t) = alpha* x(t-1) + noise  
+"""
+x = 1.0
+trajectory2 =[]
+for _ in range(100):
+    noise = np.random.normal(0,0.1)
+    x = 0.9* x+noise
+    trajectory2.append(x)
