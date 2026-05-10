@@ -44,5 +44,6 @@ print(mu.item())
 """
 what we did just now was VI for a single latent variable
 now if we do this for multiple hidden variables which are rather chains
-so 
+so instead of a single z, we have  z1,z2,z3 and so on, all interconnected
+
 """
