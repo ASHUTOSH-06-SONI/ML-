@@ -23,7 +23,7 @@ for _ in range(100):
     trajectory.append(state)
 
 print(np.mean(trajectory))
-
+print("\n")
 """
 Continous States, this one fits into diffusion models
 x(t) = alpha* x(t-1) + noise  
@@ -34,3 +34,4 @@ for _ in range(100):
     noise = np.random.normal(0,0.1)
     x = 0.9* x+noise
     trajectory2.append(x)
+print(np.mean(trajectory2))

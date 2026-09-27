@@ -9,10 +9,7 @@ trajectory = [xt.item()]
 # Forward noising process
 for t in range(T):
     noise = torch.randn(())
-    xt = (
-        torch.sqrt(torch.tensor(1-beta))*xt
-    + torch.sqrt(torch.tensor(beta))*noise
-    )
+    xt = (torch.sqrt(torch.tensor(1-beta))*xt + torch.sqrt(torch.tensor(beta))*noise)
     trajectory.append(xt.item())
 
 plt.plot(trajectory)
